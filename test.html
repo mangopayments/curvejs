@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart animation</title>
+
+    <style>
+
+      .added {
+        background: lime;
+      }
+
+      .holder {
+        background: red;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 600px;
+      }
+
+      #cart {
+        width: 50px;
+        height: 50px;
+        float: right;
+        margin-right: 500px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="cart"></div>
+
+    <div class="holder">
+      <img class="thumb" src="thumb.jpg" />
+      <button id="peron">bla</button>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="curve.min.js"></script>
+    <script>
+      $('#peron').curve({
+        target: '#cart',
+        duration: 750,
+        startLength: 0,
+        endLength: .733,
+        endAngle: 30,
+        startAngle: -30
+      });
+    </script>
+  </body>
+</html>

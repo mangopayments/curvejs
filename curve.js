@@ -20,7 +20,10 @@
       var $thumb = $(settings.parent).find(settings.thumb);
       var $target = $(settings.target);
 
-      $(this).on(settings.trigger, function(){
+      $(this).on(settings.trigger, function(e){
+
+        if(settings.trigger === "click")
+          e.preventDefault();    
 
         var from = $thumb.offset();
         var to = $target.offset();
